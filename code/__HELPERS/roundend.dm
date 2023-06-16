@@ -334,6 +334,8 @@
 	parts += goal_report()
 	//Economy & Money
 	parts += market_report()
+	//V.I.P's
+	parts += vip_report()
 
 	listclearnulls(parts)
 
@@ -774,3 +776,32 @@
 				return
 			qdel(query_update_everything_ranks)
 		qdel(query_check_everything_ranks)
+
+/*--------------------------- DEVELOPMENT CODE STARTS HERE -----------------------------------*/
+/datum/controller/subsystem/ticker/proc/vip_report()
+	var/list/parts = list()
+//	parts += "<span class='header'>Most Valuable Agent:</span>"
+	parts += vip_printer()
+	return parts
+
+/datum/controller/subsystem/ticker/proc/vip_printer()
+	. = list()
+	var/list/vip = list()
+	for(var/i in GLOB.player_list)
+		if(!ishuman(i))
+			continue
+		var/mob/living/carbon/human/human_player = i
+		//determine highest score here, weed out the rest. For now since we're just testing, it'll just fetch the only one.
+		if(!human_player.mind)
+			continue
+		vip += human_player
+	if(!length(vip))
+		. += "Nobody finished any work at all! What did we hire you for?</div>"
+		return
+	. += "<div class='panel stationborder'><span class='header'>The following employee was instrumental in this shift:</span>"
+	. += "<ul class='playerlist'>"
+	for(var/mob/living/carbon/human/human_player in vip)
+		. += "<li>[printplayer(human_player.mind)] Give them a round of applause!</li>" //replace this with "Who performed X amount of work", or "Who defeated X monsters"
+	. += "</ul></div>"
+
+/*--------------------------- DEVELOPMENT CODE STARTS HERE -----------------------------------*/
