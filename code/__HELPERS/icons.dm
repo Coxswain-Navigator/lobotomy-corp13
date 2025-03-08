@@ -1378,4 +1378,3 @@ GLOBAL_LIST_EMPTY(transformation_animation_objects)
 	SLEEP_CHECK_DEATH(1)
 	appearance = copycat.appearance
 	qdel(copycat)
-	return
