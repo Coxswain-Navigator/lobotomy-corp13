@@ -11,8 +11,8 @@
 	pixel_y = -16
 	base_pixel_y = -16
 
-	maxHealth = 600
-	health = 600
+	maxHealth = 800
+	health = 800
 	blood_volume = 0
 	density = FALSE
 	damage_coeff = list(RED_DAMAGE = 0, WHITE_DAMAGE = 1.5, BLACK_DAMAGE = 0.8, PALE_DAMAGE = 1)
@@ -50,6 +50,9 @@
 			I leave the chamber, satisfied with my observations."),
 		"Exit the containment unit" = list(FALSE, "The manual says to leave the chamber immediately if the cup's condition becomes violent. <br>As I leave, the water falls still."),
 	)
+
+	work_start_lines = list("Many employees are dying under the cognition of %ABNO.")
+	middle_work_lines = list("The longer %PERSON stays, the worse the situation becomes.")
 
 	var/cooldown_time = 2
 	var/aoe_damage = 10
