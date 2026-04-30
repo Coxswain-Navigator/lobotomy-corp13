@@ -56,6 +56,10 @@
 			You're not ready to build the future."),
 	)
 
+	work_start_lines = list("%PERSON is (CENSORED) to (CENSORED).")
+	early_work_lines = list("%PERSON is feeling (CENSORED) from (CENSORED).")
+	late_work_lines = list("(CENSORED) is doing (CENSORED) and... Goodness, that's disgusting.")
+
 	var/can_act = TRUE
 	var/ability_damage = 50
 	var/ability_cooldown

@@ -59,6 +59,9 @@
 			You opened your eyes and looked again at the heart. <br>It remains in the air, floating towards a new beginning."),
 	)
 
+	work_start_lines = list("Often, some of our employees will be eager to throw themselves into %ABNO.")
+	middle_work_line = list("Our %ABNO was born in an abyss of despair and floats towards a new beginning.")
+
 	var/pulse_cooldown
 	var/pulse_cooldown_time = 8 SECONDS
 	var/pulse_damage = 30 // Scales with distance; Ideally, you shouldn't be able to outheal it with white V armor or less
