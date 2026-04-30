@@ -66,13 +66,30 @@
 		"Hello" = list(TRUE, "The robot lifts both arms with some struggle. <br>\
 			The terminal prints out its words: <br>\
 			<Welcome, Dear Guest. Have you enjoyed the town tour? \
-			We’d like you to have a souvenir. :-)> <br>\
+			We'd like you to have a souvenir. :-)> <br>\
 			A smile is displayed on the terminal, <br>\
 			but in the robot’s gestures, you feel a plea for help."),
 		"Goodbye" = list(FALSE, "The terminal’s light goes red, and warnings start to blare. <br>\
 			The robot shakes intensely as if in pain. <br>\
 			<Farewell. <br>Farewell, <br>FarewellFarewellFarewellFarewellFarewellFarewellFarewellFarewellFarewell>"),
 	)
+
+	work_start_lines = list("In the Backstreets, you could sometimes find toys from ages ago.")
+	early_work_lines = list("%ABNO is clearly unfinished, for what purpose it was created is uncertain.")
+	middle_work_lines = list("Due to power failure or some other issue, a terminal on %ABNO's chest is dark.")
+	work_end_lines = list("%PERSON wonders about the \"Souvenier\" %ABNO occasionally mentions.", "%ABNO attempts to raise a hand in farewell, but is unable to do so.")
+
+	work_start_lines = list("%ABNO spins around %PERSON, however, %PERSON continues to concentrate on the task at hand.",
+	"%ABNO is well versed in all manner of cleaning. It was designed to take care of a family household all on its own.",
+	"When it was discovered that %ABNO contained a critical error, it had already been sent to a household.",
+	"Blood covered the whole floor, screams echoed, people were running away, and %ABNO was gleefully learning the concept of \"cleaning\".")
+	early_work_lines = list("A pristine white surface sleek with fine lines and short but efficient legs, %ABNO was created to help people.",
+	"XX Incorporated, the manufacturer of %ABNO, was famous for its robotics products.")
+	middle_work_lines = list("%ABNO has various functions installed in its body. From burglar alarms and a monitoring system to a coffee maker and light control, it contains everything a household needs.",
+	"You may be surprised to learn the numerous functionalities %ABNO contains in its compact body. If you were to dismantle it, you would be even more impressed by how efficiently they packed all the necessary equipment into it.")
+	late_work_lines = list("If %ABNO were to have any capacity of emotion, it would likely feel very proud of itself for all the help it provides to others.",
+	"%ABNO always ponders on how it can do more to help.", "Most people are unaware of this, but %ABNO makes amazing coffee. Of course, no one is likely to ask it to do such a thing now.")
+	work_end_lines = list("%PERSON has decided against buying a robot vacuum cleaner after seeing %ABNO.", "%PERSON only hopes that %ABNO's \"cleaning\" mode is never activated.")
 
 	var/can_act = TRUE
 	var/grab_cooldown
@@ -156,7 +173,7 @@
 
 /mob/living/simple_animal/hostile/abnormality/kqe/AttemptWork(mob/living/carbon/human/user, work_type)
 	if((work_type != "Write HELLO") && (work_type != "Write GOODBYE") && (work_type != "Write DUMBASS") && !question)
-		return TRUE
+		return ..()
 	if(((work_type == "Write HELLO") || (work_type == "Write GOODBYE") || (work_type == "Write DUMBASS")) && !question)
 		to_chat(user, span_notice("The terminal is blank."))
 		return FALSE
