@@ -2785,6 +2785,9 @@
 "vD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
+/obj/item/pinpointer/wayfinding,
+/obj/item/pinpointer/wayfinding,
+/obj/item/pinpointer/wayfinding,
 /turf/open/floor/wood,
 /area/facility_hallway/command)
 "vG" = (
@@ -6106,6 +6109,9 @@
 "WB" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/pinpointer/wayfinding,
+/obj/item/pinpointer/wayfinding,
+/obj/item/pinpointer/wayfinding,
 /turf/open/floor/wood,
 /area/facility_hallway/command)
 "WC" = (
