@@ -336,8 +336,6 @@
 	name = "legerdemain"
 	desc = "The fruit's cracked shell would rattle as if it could jump at any moment."
 	icon_state = "legerdemain"
-	flags_inv = NONE
-	//Forbidden fruit of knowledge allegory = wisdom; decent white resistance. Regeneration and healing-focused so weak to pale.
 	armor = list(RED_DAMAGE = 30, WHITE_DAMAGE = 40, BLACK_DAMAGE = 20, PALE_DAMAGE = -20) // 70
 	attribute_requirements = list(
 							FORTITUDE_ATTRIBUTE = 40
